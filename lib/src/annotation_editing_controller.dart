@@ -23,7 +23,7 @@ class AnnotationEditingController extends TextEditingController {
             _mapping[_mapping.keys.firstWhere((element) {
               final reg = RegExp(element);
 
-              return reg.hasMatch(match[0]);
+              return reg.hasMatch(match[0]??"");
             })];
 
         // Default markup format for mentions
