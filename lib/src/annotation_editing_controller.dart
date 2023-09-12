@@ -28,7 +28,7 @@ class AnnotationEditingController extends TextEditingController {
 
         // Default markup format for mentions
         if (!(mention?.disableMarkup??false)) {
-          return '[${mention.trigger}${mention.display}:${mention.id}]';
+          return '[${mention?.trigger??""}${mention?.display??""}:${mention?.id??""}]';
         } else {
           return match[0];
         }
