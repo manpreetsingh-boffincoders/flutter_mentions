@@ -30,7 +30,7 @@ class AnnotationEditingController extends TextEditingController {
         if (!(mention?.disableMarkup??false)) {
           return '[${mention?.trigger??""}${mention?.display??""}:${mention?.id??""}]';
         } else {
-          return match[0];
+          return match[0]??"";
         }
             },
             onNonMatch: (String text) {
